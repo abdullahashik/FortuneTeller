@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="student" class="com.thunderbolt.useXML.Student">
+		<property name="id" value="13131010" />
+		<property name="name" value="Abdullahil Ashik MD Arefin" />
+		<property name="dept" value="CSE" />
+		<property name="fortune" ref="fortune" />
+	</bean>
+
+	<bean id="fortune" class="com.thunderbolt.useXML.FortuneTellerImpl">
+		<property name="fortunes">
+			<list>
+				<value>What is given comes back to be taken</value>
+				<value>Did you had breakfast? I can see you will not feel hunger for a while...!</value>
+				<value>You are soaked to rain! I'm sensing your cloths will take time to dry off!</value>
+				<value>You got CGPA 4.00? Well, in your future you will be admired as A+ Grade student!</value>
+				<value>Fool! Stop using these tools, build your own future! </value>
+			</list>
+		</property>
+	</bean>
+
+
+</beans>
+
+
+
+
+
